@@ -6,7 +6,13 @@
 /*   By: kzennoun <kzennoun@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:40:21 by kzennoun          #+#    #+#             */
-/*   Updated: 2020/11/23 13:41:55 by kzennoun         ###   ########lyon.fr   */
+/*   Updated: 2020/11/23 16:14:13 by kzennoun         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_isascii(int c)
+{
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
+}

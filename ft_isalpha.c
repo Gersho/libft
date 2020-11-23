@@ -6,11 +6,11 @@
 /*   By: kzennoun <kzennoun@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:40:06 by kzennoun          #+#    #+#             */
-/*   Updated: 2020/11/23 15:25:20 by kzennoun         ###   ########lyon.fr   */
+/*   Updated: 2020/11/23 15:47:18 by kzennoun         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isalpha(int c)
+int	ft_isalpha(int c)
 {
 	if ((c > 64 && c < 91) || (c > 96 && c < 123))
 		return (1);

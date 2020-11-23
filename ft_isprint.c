@@ -6,7 +6,13 @@
 /*   By: kzennoun <kzennoun@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:40:26 by kzennoun          #+#    #+#             */
-/*   Updated: 2020/11/23 13:41:57 by kzennoun         ###   ########lyon.fr   */
+/*   Updated: 2020/11/23 16:21:54 by kzennoun         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_isprint(int c)
+{
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
+}

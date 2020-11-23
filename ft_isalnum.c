@@ -6,7 +6,15 @@
 /*   By: kzennoun <kzennoun@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:40:01 by kzennoun          #+#    #+#             */
-/*   Updated: 2020/11/23 13:41:54 by kzennoun         ###   ########lyon.fr   */
+/*   Updated: 2020/11/23 15:55:15 by kzennoun         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+int	ft_isalnum(int c)
+{
+	if (ft_isalpha(c) || ft_isdigit(c))
+		return (1);
+	return (0);
+}

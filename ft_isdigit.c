@@ -6,7 +6,13 @@
 /*   By: kzennoun <kzennoun@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:40:24 by kzennoun          #+#    #+#             */
-/*   Updated: 2020/11/23 13:41:56 by kzennoun         ###   ########lyon.fr   */
+/*   Updated: 2020/11/23 15:47:34 by kzennoun         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_isdigit(int c)
+{
+	if (c > 47 && c < 58)
+		return (1);
+	return (0);
+}
