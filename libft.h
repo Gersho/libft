@@ -6,7 +6,7 @@
 /*   By: kzennoun <kzennoun@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:26:56 by kzennoun          #+#    #+#             */
-/*   Updated: 2020/11/24 14:24:45 by kzennoun         ###   ########lyon.fr   */
+/*   Updated: 2020/11/24 16:39:23 by kzennoun         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,20 +30,21 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 void	ft_bzero(void *s, size_t n);
+void	*ft_memset(void *b, int c, size_t len);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 size_t	ft_strlen(const char *str);
 
-/* TODO 
-ft_calloc.c 
-ft_strdup.c 
-
-
-ft_memccpy.c 
-ft_memchr.c 
-ft_memcmp.c 
-ft_memcpy.c
-ft_memmove.c 
-ft_memset.c
-
+/*
+** ft_calloc.c
+** ft_strdup.c
+**
+**
+** ft_memchr.c
+** ft_memcmp.c
+** ft_memmove.c
+**
+**
 */
 
 #endif

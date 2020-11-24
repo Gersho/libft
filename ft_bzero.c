@@ -6,7 +6,7 @@
 /*   By: kzennoun <kzennoun@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:39:55 by kzennoun          #+#    #+#             */
-/*   Updated: 2020/11/24 11:49:34 by kzennoun         ###   ########lyon.fr   */
+/*   Updated: 2020/11/24 16:56:56 by kzennoun         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	int		i;
+	size_t	i;
 	char	*str;
 
 	str = (char*)s;
