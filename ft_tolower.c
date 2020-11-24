@@ -6,7 +6,13 @@
 /*   By: kzennoun <kzennoun@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:41:05 by kzennoun          #+#    #+#             */
-/*   Updated: 2020/11/23 13:41:14 by kzennoun         ###   ########lyon.fr   */
+/*   Updated: 2020/11/24 09:53:53 by kzennoun         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_tolower(int c)
+{
+	if (c >= 65 && c <= 90)
+		c += 32;
+	return (c);
+}

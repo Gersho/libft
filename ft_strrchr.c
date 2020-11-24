@@ -6,7 +6,24 @@
 /*   By: kzennoun <kzennoun@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:41:02 by kzennoun          #+#    #+#             */
-/*   Updated: 2020/11/23 13:41:15 by kzennoun         ###   ########lyon.fr   */
+/*   Updated: 2020/11/24 12:22:05 by kzennoun         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int c)
+{
+	int	len;
+
+	len = ft_strlen(s);
+	if (c == 0)
+		return ((char *)s + len);
+	while (len >= 0)
+	{
+		if (c == s[len])
+			return ((char *)s + len);
+		len--;
+	}
+	return (NULL);
+}
