@@ -6,7 +6,7 @@
 /*   By: kzennoun <kzennoun@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:40:52 by kzennoun          #+#    #+#             */
-/*   Updated: 2020/11/24 14:20:48 by kzennoun         ###   ########lyon.fr   */
+/*   Updated: 2020/11/25 03:35:28 by kzennoun         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	unsigned int i;
 	unsigned int j;
 
+	if (!dest || !src)
+		return (0);
 	j = 0;
 	while (src[j])
 	{

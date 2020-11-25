@@ -6,7 +6,7 @@
 /*   By: kzennoun <kzennoun@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:40:57 by kzennoun          #+#    #+#             */
-/*   Updated: 2020/11/24 16:57:42 by kzennoun         ###   ########lyon.fr   */
+/*   Updated: 2020/11/25 03:24:58 by kzennoun         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,18 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*casted_s1;
+	unsigned char	*casted_s2;
 
+	casted_s1 = (unsigned char*)s1;
+	casted_s2 = (unsigned char*)s2;
 	i = 0;
 	while (i < n)
 	{
-		if (s1[i] != s2[i] || s1[i] == '\0' || s2[i] == '\0')
-			return (s1[i] - s2[i]);
+		if (casted_s1[i] != casted_s2[i] || s1[i] == '\0' || s2[i] == '\0')
+			return (casted_s1[i] - casted_s2[i]);
 		i++;
 	}
-	return (s1[i] - s2[i]);
+	return (0);
 }
