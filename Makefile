@@ -13,23 +13,28 @@ OBJS	= $(SRCS:.c=.o)
 OBJSBONUS	= $(BONUS:.c=.o)
 
 NAME	= libft.a
-CC		= cc
+CC		= gcc
 RM		= rm -f
 CFLAGS	= -Wall -Wextra -Werror -g
 AR		= ar -cr
 
 .c.o:
-			$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+			$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) -I
 
 $(NAME):	$(OBJS)
-			$(AR) $(NAME) $(OBJS)
+			$(AR) $(NAME) $?
 
 all: 		$(NAME)
 
 clean:
 			$(RM) $(OBJS)
+			$(RM) $(OBJSBONUS)
 
 fclean:		clean
 			$(RM) $(NAME)
 
 re:			fclean all
+
+bonus:		$(OBJSBONUS)
+			$(AR) $(NAME) $(OBJSBONUS)
+			
