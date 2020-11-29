@@ -6,7 +6,7 @@
 /*   By: kzennoun <kzennoun@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 13:02:12 by kzennoun          #+#    #+#             */
-/*   Updated: 2020/11/27 05:51:38 by kzennoun         ###   ########lyon.fr   */
+/*   Updated: 2020/11/29 11:40:07 by kzennoun         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,21 @@ int		ft_get_split_size(char const *s, char c)
 
 	i = 0;
 	while (s[i] != c)
-		i--;
-	return (-i);
+		i++;
+	return (i);
 }
 
-void	*ft_free_all_2d(char **ptr, int j)
+int		ft_skip_separators(char *s, char c)
+{
+	int		i;
+
+	i = 0;
+	while (s[i] == c)
+		i++;
+	return (i);
+}
+
+char	**ft_free_all_2d(char **ptr, int j)
 {
 	while (j >= 0)
 		free(ptr[j]);
@@ -63,40 +73,19 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	i = 0;
 	j = 0;
-	split_size = 0;
 	while (s[i])
 	{
-		if (s[i] == c && i != 0 && s[i - 1] != c)
+		if (s[i] == c)
+			i += ft_skip_separators((char *)s + i, c);
+		else
 		{
-			split_size = ft_get_split_size(((char *)s + i - 1), c);
+			split_size = ft_get_split_size((char *)s + i, c);
 			if (!(ptr[j] = malloc((split_size + 1) * sizeof(char))))
 				return (ft_free_all_2d(ptr, j - 1));
-			i += ft_strlcpy(ptr[j], (char *)s + i - split_size, split_size + 1);
+			i += ft_strlcpy(ptr[j], (char *)s + i, split_size + 1);
 			j++;
 		}
-		i++;
 	}
-/* 	
-	split_size = ft_get_split_size(((char *)s), c);
-	if (!(ptr[0] = malloc((split_size + 1) * sizeof(char))))
-		return (ft_free_all_2d(ptr, 0));
-	printf("%d", split_size);
-	ft_strlcpy(ptr[0], (char *)s, split_size + 1);
-	printf();
-	i = 0;
-	j = 1;
-	while (s[i])
-	{
-		if (s[i] == c && s[i + 1] != c)
-		{
-			split_size = ft_get_split_size(((char *)s + i + 1), c);
-			if (!(ptr[j] = malloc((split_size + 1) * sizeof(char))))
-				return (ft_free_all_2d(ptr, j));
-			i += ft_strlcpy(ptr[j], (char *)s + i + 1, split_size + 1);
-			j++;
-		}
-		i++;
-	} */
 	ptr[j] = NULL;
 	return (ptr);
 }
