@@ -6,14 +6,100 @@
 /*   By: kzennoun <kzennoun@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 13:02:12 by kzennoun          #+#    #+#             */
-/*   Updated: 2020/12/01 16:11:22 by kzennoun         ###   ########lyon.fr   */
+/*   Updated: 2020/12/01 17:31:23 by kzennoun         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <stdio.h>
 
+int		ft_get_sep_count(char const *s, char c)
+{
+	int		i;
+	int		sep_count;
+
+
+	sep_count = 0;
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] == c && /* s[i + 1] != c */)
+			sep_count++;
+		i++;
+	}
+	return (sep_count);
+}
+
+char **ft_split(char const *s, char c)
+{
+	int		i;
+	char	**ptr;
+	int		sep_count;
+
+	ptr = NULL;
+
+	sep_count = ft_get_sep_count(s, c);
+	i = 0;
+/* 	while (s[i])
+	{
+		if (s[i] == c)
+		{
+			//skip separators
+		}
+		else 
+		{
+
+			//measure word, copy word
+		}
+		i++;
+	} 
+	 */
+	return (ptr);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 int		ft_get_sep_count(char const *s, char c)
 {
 	int		i;
@@ -29,7 +115,7 @@ int		ft_get_sep_count(char const *s, char c)
 	}
 	return (sep_count);
 }
-/* 
+
 int		ft_get_split_size(char const *s, char c)
 {
 	int		i;
@@ -48,7 +134,7 @@ int		ft_skip_separators(char *s, char c)
 	while (s[i] == c)
 		i++;
 	return (i);
-} */
+}
 
 char	**ft_free_all_2d(char **ptr, int j)
 {
@@ -60,7 +146,9 @@ char	**ft_free_all_2d(char **ptr, int j)
 
 char	**ft_split(char const *s, char c)
 {
-/* 	int		sep_count;
+
+
+	int		sep_count;
 	int		i;
 	int		j;
 	int		split_size;
@@ -87,5 +175,6 @@ char	**ft_split(char const *s, char c)
 		}
 	}
 	ptr[j] = NULL;
-	return (ptr); */
+	return (ptr);
 }
+ */
