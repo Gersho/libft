@@ -6,7 +6,7 @@
 /*   By: kzennoun <kzennoun@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 15:24:23 by kzennoun          #+#    #+#             */
-/*   Updated: 2020/11/29 17:45:40 by kzennoun         ###   ########lyon.fr   */
+/*   Updated: 2020/12/01 02:21:46 by kzennoun         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*ptr;
+/* 	t_list	*ptr;
 	t_list	*temp;
 	t_list	*first;
 
@@ -27,6 +27,6 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		if (!(temp = ft_lstnew((*f)(lst->content))))
 			ft_lstclear(ptr, (*del));
 		ft_lstadd_back(&ptr, temp);
-		lst = lst->next;
+		lst = lst->next; */
 	}
 }
