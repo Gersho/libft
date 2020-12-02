@@ -38,3 +38,4 @@ re:			fclean all
 bonus:		$(OBJSBONUS)
 			$(AR) $(NAME) $(OBJSBONUS)
 			
+.PHONY:		bonus re fclean clean all

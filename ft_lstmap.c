@@ -6,7 +6,7 @@
 /*   By: kzennoun <kzennoun@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 15:24:23 by kzennoun          #+#    #+#             */
-/*   Updated: 2020/12/01 15:59:37 by kzennoun         ###   ########lyon.fr   */
+/*   Updated: 2020/12/02 14:51:45 by kzennoun         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,3 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (first);
 }
-
