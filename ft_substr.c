@@ -6,7 +6,7 @@
 /*   By: kzennoun <kzennoun@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 06:46:44 by kzennoun          #+#    #+#             */
-/*   Updated: 2020/12/01 14:16:24 by kzennoun         ###   ########lyon.fr   */
+/*   Updated: 2020/12/02 16:01:34 by kzennoun         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 			return (NULL);
 	}
 	ft_strlcpy(ptr, s + start, len + 1);
-	ptr[len + 1] = '\0';
+	ptr[len] = '\0';
 	return (ptr);
 }
