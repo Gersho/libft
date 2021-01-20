@@ -6,13 +6,13 @@
 /*   By: kzennoun <kzennoun@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/20 11:33:23 by kzennoun          #+#    #+#             */
-/*   Updated: 2021/01/20 11:45:05 by kzennoun         ###   ########lyon.fr   */
+/*   Updated: 2021/01/20 11:53:32 by kzennoun         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_get_digit_count(long unsigned int n)
+int		ft_get_udigit_count(long unsigned int n)
 {
 	int		i;
 	
@@ -32,7 +32,7 @@ char	*ft_utoa(unsigned int n)
 	long unsigned int		long_n;
 
 	long_n = n;
-	digit_count = ft_get_digit_count(long_n);
+	digit_count = ft_get_udigit_count(long_n);
 	if (!(str = malloc((digit_count + 1) * sizeof(char))))
 		return (NULL);
 	str[0] = '0';
