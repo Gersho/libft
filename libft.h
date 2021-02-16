@@ -6,7 +6,7 @@
 /*   By: kzennoun <kzennoun@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:26:56 by kzennoun          #+#    #+#             */
-/*   Updated: 2021/02/11 14:00:55 by kzennoun         ###   ########lyon.fr   */
+/*   Updated: 2021/02/16 11:14:08 by kzennoun         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,4 +72,5 @@ void				ft_putnbr_u_fd(unsigned int nb, int fd);
 char				*ft_utoa(unsigned int n);
 char				*ft_llutoa_base(unsigned long long int nbr, char *base);
 char				*ft_ltoa(long int long_n);
+char				**ft_free_all_2d(char **ptr, int j);
 #endif
