@@ -6,7 +6,7 @@
 /*   By: kzennoun <kzennoun@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:26:56 by kzennoun          #+#    #+#             */
-/*   Updated: 2021/02/16 14:44:00 by kzennoun         ###   ########lyon.fr   */
+/*   Updated: 2021/02/19 14:57:53 by kzennoun         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,4 +76,5 @@ char		**ft_free_all_2d(char **ptr, int j);
 int			get_next_line(int fd, char **line);
 char		*ft_gnl_substr(char *s, size_t len_s, size_t start, size_t size);
 char		*ft_gnl_join(char *stock, char *s2, int size);
+void		ft_print_char_2d(char **str);
 #endif

@@ -7,7 +7,7 @@ ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_split.c ft_str_c_index.c \
 ft_putxchary_fd.c ft_putnbr_u_fd.c ft_utoa.c ft_llutoa_base.c ft_ltoa.c \
 ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c \
 ft_lstiter.c ft_lstlast.c ft_lstnew.c ft_lstsize.c ft_lstmap.c \
-get_next_line.c get_next_line_utils.c
+ft_print_char_2d.c get_next_line.c get_next_line_utils.c
 
 OBJS    = $(SRCS:.c=.o)
 
